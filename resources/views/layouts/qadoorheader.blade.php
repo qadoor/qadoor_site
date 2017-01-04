@@ -135,7 +135,7 @@
             <dd><a href="#" target="_blank">市场运营日志</a></dd>
         </dl>
         <div class="copyright  col-xs-12 col-md-12 mb40">
-            © 2013-2016 沪ICP备11008151号 沪公网安备11010802014853
+            © 2016 沪ICP备14034074号-7
         </div>
     </div>
 </footer>

@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            <state relative-caret-position="348">
+              <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -48,13 +48,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qadoorheader.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="qadoorheader.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/qadoorheader.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="52" column="56" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="56" />
+            <state relative-caret-position="314">
+              <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
               <folding>
-                <marker date="1482767258000" expanded="true" signature="1037:1210" ph="..." />
+                <marker date="1483539718000" expanded="true" signature="1037:1210" ph="..." />
               </folding>
             </state>
           </provider>
@@ -196,7 +196,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_12_17_080915_create_questions_table.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/qadoorheader.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/qalist.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/taglist.blade.php" />
@@ -205,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Repositories/QuestionsRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/qadoorheader.blade.php" />
       </list>
     </option>
   </component>
@@ -503,12 +503,12 @@
       <workItem from="1482241533813" duration="5211000" />
       <workItem from="1482343317417" duration="5357000" />
       <workItem from="1482502218292" duration="15361000" />
-      <workItem from="1483168348181" duration="3376000" />
+      <workItem from="1483168348181" duration="3505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102604000" />
+    <option name="totallyTimeSpent" value="102733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
@@ -820,8 +820,8 @@
         <state relative-caret-position="280">
           <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
           <folding>
-            <marker date="1483538305000" expanded="false" signature="5794:5801" ph="«" />
-            <marker date="1483538305000" expanded="false" signature="6300:6307" ph="»" />
+            <marker date="1483539569000" expanded="false" signature="5794:5801" ph="«" />
+            <marker date="1483539569000" expanded="false" signature="6300:6307" ph="»" />
           </folding>
         </state>
       </provider>
@@ -831,9 +831,9 @@
         <state relative-caret-position="416">
           <caret line="418" column="0" lean-forward="true" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
           <folding>
-            <marker date="1483538324000" expanded="true" signature="25690:26290" ph="..." />
-            <marker date="1483538324000" expanded="false" signature="25823:25830" ph="«" />
-            <marker date="1483538324000" expanded="false" signature="26217:26224" ph="»" />
+            <marker date="1483539569000" expanded="true" signature="25690:26290" ph="..." />
+            <marker date="1483539569000" expanded="false" signature="25823:25830" ph="«" />
+            <marker date="1483539569000" expanded="false" signature="26217:26224" ph="»" />
           </folding>
         </state>
       </provider>
@@ -923,16 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/qadoorheader.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="52" column="56" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <marker date="1482767258000" expanded="true" signature="1037:1210" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -961,9 +951,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="30" column="46" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        <state relative-caret-position="348">
+          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/qadoorheader.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+          <folding>
+            <marker date="1483539718000" expanded="true" signature="1037:1210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
