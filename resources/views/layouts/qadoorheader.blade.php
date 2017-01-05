@@ -28,7 +28,7 @@
 <body>
 <header id="header" class="container">
     <div class="head row">
-        <div class="logo"><img src="{{ asset('assets/frontend/img/logo.png') }}" alt="QAdoor"></div>
+        <div class="logo"><a href="/"><img src="{{ asset('assets/frontend/img/logo.png') }}" alt="QAdoor"></a></div>
         <div class="nav nav_first">
             <nav class="navbar navbar-default" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -58,8 +58,8 @@
                             <li><a href="/category/{{ $cat->id }}">{{ $cat->name }}</a></li>
                         @endforeach
 
-                        <li><a href="#"><i class="glyphicon glyphicon-heart"></i>注册</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>登录</a></li>
+                        {{--<li><a href="#"><i class="glyphicon glyphicon-heart"></i>注册</a></li>--}}
+                        {{--<li><a href="#"><i class="glyphicon glyphicon-user"></i>登录</a></li>--}}
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -73,9 +73,9 @@
                 <button type="button" class="btn btn-default" id="examplebtn1">搜索</button>
             </div>
         </div>
-        <div class="login">
-            <a href="#">注册 </a>·<a href="#"> 登录</a>
-        </div>
+        {{--<div class="login">--}}
+            {{--<a href="#">注册 </a>·<a href="#"> 登录</a>--}}
+        {{--</div>--}}
     </div>
 </header>
 <div class="container-fluid nav_second">
@@ -100,45 +100,46 @@
     <div class="container row mt40">
         <dl class="col-xs-12 col-sm-6 col-md-3 about clear_fix">
             <dt class="mb10">网站相关</dt>
-            <dd><a href="#">关于我们</a></dd>
-            <dd><a href="#">服务条款</a></dd>
-            <dd><a href="#">帮助中心</a></dd>
-            <dd><a href="#">声望与权限</a></dd>
-            <dd><a href="#">编辑器语法</a></dd>
-            <dd><a href="#">每周精选</a></dd>
-            <dd><a href="#">App 下载</a></dd>
-            <dd><a href="#">社区服务中心</a></dd>
+            <dd><a href="https://github.com/qadoor" target="_blank">关于我们</a></dd>
+            {{--<dd><a href="#">服务条款</a></dd>--}}
+            {{--<dd><a href="#">帮助中心</a></dd>--}}
+            {{--<dd><a href="#">声望与权限</a></dd>--}}
+            {{--<dd><a href="#">编辑器语法</a></dd>--}}
+            {{--<dd><a href="#">每周精选</a></dd>--}}
+            {{--<dd><a href="#">App 下载</a></dd>--}}
+            {{--<dd><a href="#">社区服务中心</a></dd>--}}
         </dl>
 
         <dl class="col-xs-12 col-sm-6 col-md-3 contact clear_fix">
             <dt class="mb10">联系合作</dt>
-            <dd><a href="#">联系我们</a></dd>
-            <dd><a href="#">加入我们</a></dd>
-            <dd><a href="#">合作伙伴</a></dd>
-            <dd><a href="#">媒体报道</a></dd>
-            <dd><a href="#">建议反馈</a></dd>
+            <dd><a href="https://github.com/qadoor" target="_blank">联系我们</a></dd>
+            {{--<dd><a href="#">加入我们</a></dd>--}}
+            {{--<dd><a href="#">合作伙伴</a></dd>--}}
+            {{--<dd><a href="#">媒体报道</a></dd>--}}
+            {{--<dd><a href="#">建议反馈</a></dd>--}}
         </dl>
         <dl class="col-xs-12 col-sm-6 col-md-3 link clear_fix">
             <dt class="mb10">常用链接</dt>
-            <dd><a href="#" target="_blank">笔记插件: Chrome</a></dd>
-            <dd><a href="#" target="_blank">笔记插件: Firefox</a></dd>
-            <dd><a href="#" target="_blank">文档镜像</a></dd>
-            <dd><a href="#" target="_blank">社区访谈</a></dd>
-            <dd><a href="#" target="_blank">D-DAY 技术沙龙</a></dd>
-            <dd><a href="#" target="_blank">黑客马拉松 Hackathon</a></dd>
-            <dd><a href="#" target="_blank">域名搜索注册</a></dd>
+            <dd><a href="http://www.phpcomposer.com/" target="_blank">Composer中国镜像</a></dd>
+            {{--<dd><a href="#" target="_blank">笔记插件: Firefox</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">文档镜像</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">社区访谈</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">D-DAY 技术沙龙</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">黑客马拉松 Hackathon</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">域名搜索注册</a></dd>--}}
         </dl>
         <dl class="col-xs-12 col-sm-6 col-md-3 follow clear_fix">
             <dt class="mb10">关注我们</dt>
-            <dd><a href="#" target="_blank">Github</a></dd>
-            <dd><a href="#" target="_blank">Twitter</a></dd>
-            <dd><a href="#" target="_blank">新浪微博</a></dd>
-            <dd><a href="#" target="_blank">团队日志</a></dd>
-            <dd><a href="#" target="_blank">产品技术日志</a></dd>
-            <dd><a href="#" target="_blank">社区运营日志</a></dd>
-            <dd><a href="#" target="_blank">市场运营日志</a></dd>
+            <dd><a href="https://github.com/qadoor" target="_blank">Github</a></dd>
+            {{--<dd><a href="#" target="_blank">Twitter</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">新浪微博</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">团队日志</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">产品技术日志</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">社区运营日志</a></dd>--}}
+            {{--<dd><a href="#" target="_blank">市场运营日志</a></dd>--}}
         </dl>
         <div class="copyright  col-xs-12 col-md-12 mb40">
+            上海森思信息科技有限公司<br />
             © 2016 沪ICP备14034074号-7
         </div>
     </div>
