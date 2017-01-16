@@ -15,7 +15,7 @@ class TagsRepository
 
     public function tags()
     {
-        $tags = Tag::all()->take(14);
+        $tags = Tag::all()->take(13);
         return $tags;
     }
 }

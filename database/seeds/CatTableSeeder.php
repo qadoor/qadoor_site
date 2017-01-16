@@ -14,7 +14,7 @@ class CatTableSeeder extends Seeder
     {
         $categories = [
             ['name'=>'Android'],
-            ['name'=>'Web前端'],
+            ['name'=>'前端'],
             ['name'=>'IOS'],
             ['name'=>'后台'],
             ['name'=>'产品'],
