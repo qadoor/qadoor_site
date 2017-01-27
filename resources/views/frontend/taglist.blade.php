@@ -4,11 +4,11 @@
         <div class="col-xs-12 col-md-9 menu_floor">
             <section class="sub_tag">
                 <div>
-                    <img class="avatar_square_24" src="{{ asset('assets/frontend/img/js.png') }}">
+                    {{--<img class="avatar_square_24" src="{{ asset('assets/frontend/img/js.png') }}">--}}
                     <span class="h4 tag_info_title pl10"> {{ $tag->name }}</span>
 
                 </div>
-                <p class="tag_info_desc mt10">{{ $tag->name }} 是一门弱类型的动态脚本语言，支持多种编程范式，包括面向对象和函数式编程，被广泛用于 web 开发。 一般来说，完整的JavaScript包括以下几个部分： ECMAScript，描述了该语言的语法和基本对象 文档对...<a href="/t/javascript/info">[ 百科 ]</a></p>
+                {{--<p class="tag_info_desc mt10">{{ $tag->name }}</p>--}}
 
             </section>
             <section>

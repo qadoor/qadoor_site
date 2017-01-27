@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="/">首页</a></li>
-                        <li><a href="#">推荐</a></li>
+                        <li><a href="/qa_list">推荐</a></li>
                         <li><a href="/qa_list">问答</a></li>
                         {{--<li><a href="#">Android</a></li>--}}
                         {{--<li><a href="#">前端</a></li>--}}
@@ -81,7 +81,7 @@
 <div class="container-fluid nav_second">
     <div class="nav  container">
         <ul class="clear_fix">
-            <li><a href="#"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+            <li><a href="/"><i class="glyphicon glyphicon-home"></i>Home</a></li>
 
             @foreach($tags as $tag)
                 <li><a href="/tag_list/{{ $tag->id }}">{{ $tag->name }}</a></li>

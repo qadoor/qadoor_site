@@ -7,7 +7,7 @@
                     <div class="question_answer_header pb20">
                         <span class="question_sign">问</span>
                         <h1 class="h3 question_header_title" id="questionTitle">
-                            <a href="#">{{ $question->title}}</a>
+                            <a href="#">{!! $question->title !!}</a>
                         </h1>
 
                         <ul class="question_taglist clear_fix mr10">
@@ -16,14 +16,14 @@
                             @endforeach
                         </ul>
 
-                        <div class="question_author ml40">
-                            <a href="#" class="mr5"><span>webueum</span></a>
-                            1 小时前提问
-                        </div>
+                        {{--<div class="question_author ml40">--}}
+                            {{--<a href="#" class="mr5"><span>webueum</span></a>--}}
+                            {{--1 小时前提问--}}
+                        {{--</div>--}}
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12 question_answer_header_side">
-                    <span>36</span>浏览
+                    {{--<span>36</span>浏览--}}
                 </div>
             </div>
         </div>
@@ -32,60 +32,60 @@
         <div class="col-xs-12 col-md-9 mt20">
             <section class="question_item">
                 <div class="question_left">
-                    <div class="question_vote">
-                        <button type="button" class="like" data-id="1010000007532067" data-type="question" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">
-                            <span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>
-                        </button>
-                        <span class="count">0</span>
-                        <button type="button" class="hate" data-id="1010000007532067" data-type="question" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">
-                            <span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>
-                        </button>
-                    </div>
+                    {{--<div class="question_vote">--}}
+                        {{--<button type="button" class="like" data-id="1010000007532067" data-type="question" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">--}}
+                            {{--<span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>--}}
+                        {{--</button>--}}
+                        {{--<span class="count">0</span>--}}
+                        {{--<button type="button" class="hate" data-id="1010000007532067" data-type="question" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">--}}
+                            {{--<span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>--}}
+                        {{--</button>--}}
+                    {{--</div>--}}
                 </div>
                 <div class="question_detail">
-                    {{ $question->content }}
-                    <div class="question_more">
-                        <ul class="clear_fix">
-                            <li><a href="#">4 小时前提问</a></li>
-                            <li><a href="#">编辑</a></li>
-                            <li><a href="#">评论</a></li>
-                            <li><a href="#">邀请回答</a></li>
-                        </ul>
-                    </div>
+                    {!! $question->content !!}
+                    {{--<div class="question_more">--}}
+                        {{--<ul class="clear_fix">--}}
+                            {{--<li><a href="#">4 小时前提问</a></li>--}}
+                            {{--<li><a href="#">编辑</a></li>--}}
+                            {{--<li><a href="#">评论</a></li>--}}
+                            {{--<li><a href="#">邀请回答</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</div>--}}
                 </div>
             </section>
             <section class="answers_list ">
                 <div class="answers_num clear_fix">
                     <h2><bold>{{$question->answers->count()}}</bold>个回答</h2>
                     <div class="sort mt20" role="group">
-                        <a href="#" class="default ">默认排序</a>
-                        <a href="#" class="time">时间排序</a>
+                        {{--<a href="#" class="default ">默认排序</a>--}}
+                        {{--<a href="#" class="time">时间排序</a>--}}
                     </div>
                 </div>
 
                 @foreach( $question->answers as $answer)
                     <article>
                         <div class="answers_left">
-                            <div class="answers_vote">
-                                <button type="button" class="like" data-id="1010000007532067" data-type="answers" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">
-                                    <span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>
-                                </button>
-                                <span class="count">0</span>
-                                <button type="button" class="hate" data-id="1010000007532067" data-type="answers" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">
-                                    <span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>
-                                </button>
-                            </div>
+                            {{--<div class="answers_vote">--}}
+                                {{--<button type="button" class="like" data-id="1010000007532067" data-type="answers" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">--}}
+                                    {{--<span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>--}}
+                                {{--</button>--}}
+                                {{--<span class="count">0</span>--}}
+                                {{--<button type="button" class="hate" data-id="1010000007532067" data-type="answers" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">--}}
+                                    {{--<span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>--}}
+                                {{--</button>--}}
+                            {{--</div>--}}
                         </div>
                         <div class="answers_detail mt20">
-                            {{ $answer->content }}
-                            <div class="answers_more">
-                                <ul class="clear_fix">
-                                    <li><a href="#">4 小时前提问</a></li>
-                                    <li><a href="#">编辑</a></li>
-                                    <li><a href="#">评论</a></li>
-                                    <li><a href="#">邀请回答</a></li>
-                                </ul>
-                            </div>
+                            {!! $answer->content !!}
+                            {{--<div class="answers_more">--}}
+                                {{--<ul class="clear_fix">--}}
+                                    {{--<li><a href="#">4 小时前提问</a></li>--}}
+                                    {{--<li><a href="#">编辑</a></li>--}}
+                                    {{--<li><a href="#">评论</a></li>--}}
+                                    {{--<li><a href="#">邀请回答</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</div>--}}
                         </div>
                     </article>
                 @endforeach
