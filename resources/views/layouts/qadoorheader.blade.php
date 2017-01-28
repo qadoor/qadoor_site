@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <title>QAdoor问答门</title>
 
+    <meta name="baidu-site-verification" content="RhmqXDDu6I" />
+
     <!-- 收藏夹小图标 -->
     <link rel="icon" href="{{ asset('assets/frontend/img/qadoor_logo_32_32.ico') }}" type="image/x-icon" />
     <link rel="shortcut icon" href="{{ asset('assets/frontend/img/qadoor_logo_32_32.ico') }}" type="image/x-icon" />
