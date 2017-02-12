@@ -1,4 +1,10 @@
 @extends('layouts.qadoorheader')
+@section('qadoor_meta')
+    <title>QADoor问答门首页</title>
+    <meta name="keywords" content="QADoor,QADoor.com,qadoor.com,问答门">
+    <meta name="author" content="Lucas, 网站:www.yuanpengfei.com">
+    <meta name="description" content="QADoor(问答门)是一个问答索引站,聚合了互联网各大平台的问答内容,致力于为软件开发相关人员提供高质量的问答结果参考.">
+@endsection
 @section('content')
     <div class="container row">
         <div class="col-xs-12 col-md-9 menu_floor">
@@ -33,7 +39,7 @@
                                         <li class="num_vote"><i>{{ $question->votes }}</i>投票</li>
                                         @if($question->answers->count() == 0)
                                             <li class="num_answer_mid"><i>{{ $question->answers->count() }}</i>回答</li>
-                                        @elseif($question->answers->count() >= 50)
+                                        @elseif($question->answers->count() >= 5)
                                             <li class="num_answer_no"><i>{{ $question->answers->count() }}</i>回答</li>
                                         @else
                                             <li class="num_answer_ok"><i>{{ $question->answers->count() }}</i>回答</li>
@@ -42,7 +48,7 @@
                                     </ul>
                                     <div class="question">
                                         <div class="questioner mt20">
-                                            <a class="qser_name">Mno</a> 刚刚提问
+                                            <a class="qser_name">lucas</a> 刚刚提问
                                         </div>
                                         <a href="/detail/{{ $question->id }}" class="describe">
                                             {{ $question->title }}

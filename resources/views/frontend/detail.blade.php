@@ -1,4 +1,10 @@
 @extends('layouts.qadoorheader')
+@section('qadoor_meta')
+    <title>QADoor问答门问题_{!! $question->title !!}</title>
+    <meta name="keywords" content="QADoor,QADoor.com,qadoor.com,问答门,{!! $question->title !!}">
+    <meta name="author" content="Lucas, 网站:www.yuanpengfei.com">
+    <meta name="description" content="QADoor(问答门)为您提供:{!! $question->title !!}">
+@endsection
 @section('content')
     <div class="container-fluid question_answer">
         <div class="container">
@@ -15,6 +21,10 @@
                             <li class="tagPopup mb5"><a class="tag" href="#" data-toggle="popover" data-trigger="hover" data-img="https://sfault-avatar.b0.upaiyun.com/122/960/1229606535-1040000000089434_huge256" data-placement="top" data-original-title="css" data-content="层叠样式表（英语：Cascading Style Sheets，简写CSS），又称串样式列表，由W3C定义和维护的标准，一种用来为结">{{ $tag->name }}</a></li>
                             @endforeach
                         </ul>
+                        <div class="" style="margin-left: 40px">
+                            原文:&nbsp;
+                            <a class="cut cut70" href="{{ $question->reprint_link }}" target="_blank" style="display:inline-block;">{{ $question->reprint_link }}</a>
+                        </div>
 
                         {{--<div class="question_author ml40">--}}
                             {{--<a href="#" class="mr5"><span>webueum</span></a>--}}
@@ -64,17 +74,17 @@
                 </div>
 
                 @foreach( $question->answers as $answer)
-                    <article>
+                    <article style="min-height:60px">
                         <div class="answers_left">
-                            {{--<div class="answers_vote">--}}
-                                {{--<button type="button" class="like" data-id="1010000007532067" data-type="answers" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">--}}
-                                    {{--<span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>--}}
-                                {{--</button>--}}
-                                {{--<span class="count">0</span>--}}
-                                {{--<button type="button" class="hate" data-id="1010000007532067" data-type="answers" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">--}}
-                                    {{--<span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>--}}
-                                {{--</button>--}}
-                            {{--</div>--}}
+                            <div class="answers_vote">
+                                <button type="button" class="like" data-id="1010000007532067" data-type="answers" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">
+                                    <span class="sr-only">问题对人有帮助，内容完整，我也想知道答案</span>
+                                </button>
+                                <span class="count">0</span>
+                                <button type="button" class="hate" data-id="1010000007532067" data-type="answers" data-do="hate" data-trigger="hover" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="问题没有实际价值，缺少关键内容，没有改进余地">
+                                    <span class="sr-only">问题没有实际价值，缺少关键内容，没有改进余地</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="answers_detail mt20">
                             {!! $answer->content !!}

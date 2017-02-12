@@ -1,4 +1,10 @@
 @extends('layouts.qadoorheader')
+@section('qadoor_meta')
+    <title>QADoor问答门分类页_{{ $cat->name }}</title>
+    <meta name="keywords" content="QADoor,QADoor.com,qadoor.com,问答门,{{ $cat->name }}">
+    <meta name="author" content="Lucas, 网站:www.yuanpengfei.com">
+    <meta name="description" content="QADoor(问答门)是一个问答索引站,聚合了互联网各大平台的问答内容,致力于为软件开发相关人员提供高质量的问答结果参考.">
+@endsection
 @section('content')
     <div class="container row">
         <div class="col-xs-12 col-md-9 menu_floor">
