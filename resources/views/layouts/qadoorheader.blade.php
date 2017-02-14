@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
-    <meta name="baidu-site-verification" content="RhmqXDDu6I" />
+    <meta name="baidu-site-verification" content="Z7u08pk92p">
     @yield('qadoor_meta')
 
     <!-- 收藏夹小图标 -->
