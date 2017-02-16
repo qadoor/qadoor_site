@@ -517,7 +517,7 @@ footer dl dd +dd{
 	color: #bbb;
 }
 .answers_list article{
-	min-height: 50px;
+	min-height: 75px;
 	border-bottom: 1px solid #ccc;
 }
 .answers_num{
