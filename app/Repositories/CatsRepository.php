@@ -8,13 +8,17 @@
 namespace App\Repositories;
 
 use App\Cat;
+use Cache;
 
 class CatsRepository
 {
 
     public function cats()
     {
-        $cats = Cat::all();
+        //$cats = Cat::all();
+        $cats = Cache::remember('CatsRepository_cats', 120, function() {
+            return Cat::all();
+        });
         return $cats;
     }
 }

@@ -10,6 +10,7 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 
 use App\Repositories\CatsRepository;
+use Cache;
 
 class CatComposer
 {

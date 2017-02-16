@@ -9,13 +9,17 @@
 namespace App\Repositories;
 
 use App\Tag;
+use Cache;
 
 class TagsRepository
 {
 
     public function tags()
     {
-        $tags = Tag::all()->take(13);
+        //$tags = Tag::all()->take(13);
+        $tags = Cache::remember('TagsRepository_tags', 120, function() {
+            return Tag::all()->take(13);
+        });
         return $tags;
     }
 }

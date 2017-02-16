@@ -10,6 +10,7 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 
 use App\Repositories\TagsRepository;
+use Cache;
 
 class TagComposer
 {

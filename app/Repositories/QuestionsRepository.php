@@ -8,13 +8,17 @@
 namespace App\Repositories;
 
 use App\Question;
+use Cache;
 
 class QuestionsRepository
 {
 
     public function questions()
     {
-        $questions = Question::orderBy('votes', 'desc')->paginate(15);
+        //$questions = Question::orderBy('votes', 'desc')->paginate(15);
+        $questions = Cache::remember('QuestionsRepository_questions', 120, function() {
+            return Question::orderBy('votes', 'desc')->paginate(15);
+        });
         return $questions;
     }
 }
