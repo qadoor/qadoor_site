@@ -16,7 +16,7 @@
 //    return view('frontend.index');
 //});
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@qalist');
 Route::get('/tag_list/{id}', 'IndexController@taglist');
 Route::get('/qa_list', 'IndexController@qalist');
 Route::get('/detail/{id}', 'QuestionController@show');
