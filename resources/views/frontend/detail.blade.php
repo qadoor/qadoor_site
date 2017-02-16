@@ -40,6 +40,18 @@
     </div>
     <div class="container row question_answer_detail ">
         <div class="col-xs-12 col-md-9 mt20">
+            <section class="ad_first mb20">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- QADoor详情页顶部广告1 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4980361559626740"
+                     data-ad-slot="6740761150"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
             <section class="question_item">
                 <div class="question_left">
                     {{--<div class="question_vote">--}}
@@ -74,7 +86,7 @@
                 </div>
 
                 @foreach( $question->answers as $answer)
-                    <article style="min-height:60px">
+                    <article>
                         <div class="answers_left">
                             <div class="answers_vote">
                                 <button type="button" class="like" data-id="1010000007532067" data-type="answers" data-do="like" data-trigger="hover" data-toggle="tooltip" data-placement="top" title="" data-original-title="问题对人有帮助，内容完整，我也想知道答案">

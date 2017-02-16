@@ -2,6 +2,7 @@
 @section('content')
 <div class="container row">
     <div class="col-xs-12 col-md-9 menu_floor">
+
         <section class="sub_tag">
             <div>
                 {{--<img class="avatar_square_24" src="{{ asset('assets/frontend/img/js.png') }}">--}}
@@ -11,6 +12,18 @@
             {{--<p class="tag_info_desc mt10">{{ $tag->name }}</p>--}}
 
         </section>
+        <div class="ad_first mt20">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- QADoor标签页列表顶部广告1 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4980361559626740"
+                 data-ad-slot="2170960758"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
         <section>
             <div class="title_head mt20">
                 <div class="title_detail">

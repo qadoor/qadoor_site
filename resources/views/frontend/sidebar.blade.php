@@ -25,7 +25,20 @@
             {{--</div>--}}
         {{--</div>--}}
     {{--</section>--}}
-
+    <section class="ad_second mt20">
+        <div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- QADoor侧栏顶部广告1 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4980361559626740"
+                 data-ad-slot="5264027956"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </section>
     <section class="Headline mt40">
         <div class="widget_headline widget-box mt20 mb30">
             <h2 class="h4 widget-box_title">最热头条</h2>

@@ -8,6 +8,18 @@
 @section('content')
     <div class="container row">
         <div class="col-xs-12 col-md-9 menu_floor">
+            <div class="ad_first mt20">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- QADoor问答列表页顶部广告1 -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4980361559626740"
+                     data-ad-slot="9694227553"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             <section class="android floor">
                 <div class="title_head mt20">
                     <div class="title_detail">

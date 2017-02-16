@@ -328,7 +328,7 @@ footer dl dd +dd{
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 460px;
+    width: 266px;
     display: block;
 }
 .favorite_title{
@@ -516,6 +516,10 @@ footer dl dd +dd{
 	font-size: 14px;
 	color: #bbb;
 }
+.answers_list article{
+	min-height: 50px;
+	border-bottom: 1px solid #ccc;
+}
 .answers_num{
 	border-bottom: 3px solid #ccc;
 }
@@ -617,6 +621,26 @@ footer dl dd +dd{
     overflow-wrap: normal;
 	color: #859900;
 }
+
+/*广告*/
+.ad_first{
+	height: 95px;
+	/*background-color: #ccc;*/
+}
+.ad_second{
+	height: 250px;
+	/*background-color: #ccc;*/
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
