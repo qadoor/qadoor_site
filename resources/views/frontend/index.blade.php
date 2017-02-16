@@ -10,7 +10,7 @@
         <div class="col-xs-12 col-md-9 menu_floor">
             <div class="ad_first mt20">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- QAdoor首页顶部广告 -->
+                <!-- QAdoor首页顶部广告 by lucas-->
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-4980361559626740"

@@ -21,7 +21,7 @@ class IndexController extends Controller
 
         //$cats = DB::table('cats')->take(10)->remember(60)->get();
 
-        //use file cache
+        //use file cache and hehe
 
         if (!Cache::has('index_tags')) {
 
@@ -91,13 +91,27 @@ class IndexController extends Controller
     {
         //$tag = Tag::findOrFail($id);
         //$questions = Tag::findOrFail($id)->questions()->paginate(20, ['*'], 'taglist_page');
-        $tag = Cache::remember('taglist_tag', 120, function() use ($id) {
-            return Tag::findOrFail($id);
-        });
+//        $tag = Cache::remember('taglist_tag', 120, function() use ($id) {
+//            return Tag::findOrFail($id);
+//        });
 
-        $questions = Cache::remember('taglist_questions', 120, function() use ($id)  {
-            return Tag::findOrFail($id)->questions()->paginate(20, ['*'], 'taglist_page');
-        });
+        if (!Cache::has('taglist_tag')) {
+
+            Cache::store('file')->forever('taglist_tag', Tag::findOrFail($id));
+        }
+
+        $tag = Cache::store('file')->get('taglist_tag');
+
+//        $questions = Cache::remember('taglist_questions', 120, function() use ($id)  {
+//            return Tag::findOrFail($id)->questions()->paginate(20, ['*'], 'taglist_page');
+//        });
+
+        if (!Cache::has('taglist_questions')) {
+
+            Cache::store('file')->forever('taglist_questions', Tag::findOrFail($id)->questions()->paginate(20, ['*'], 'taglist_page'));
+        }
+
+        $questions = Cache::store('file')->get('taglist_questions');
 
 
         return view('frontend.taglist', compact('tag', 'questions'));
@@ -118,13 +132,29 @@ class IndexController extends Controller
             return Cat::findOrFail($id);
         });
 
-        $hotted_questions = Cache::remember('catlist_hotted_questions', 120, function() use ($id) {
-            return Cat::findOrFail($id)->questions()->orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page');
-        });
+//        $hotted_questions = Cache::remember('catlist_hotted_questions', 120, function() use ($id) {
+//            return Cat::findOrFail($id)->questions()->orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page');
+//        });
 
-        $latest_questions = Cache::remember('catlist_latest_questions', 120, function() use ($id){
-            return Cat::findOrFail($id)->questions()->orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page');
-        });
+        if (!Cache::has('catlist_hotted_questions')) {
+
+            Cache::store('file')->forever('catlist_hotted_questions', Cat::findOrFail($id)->questions()->orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page'));
+        }
+
+        $hotted_questions = Cache::store('file')->get('catlist_hotted_questions');
+
+
+//        $latest_questions = Cache::remember('catlist_latest_questions', 120, function() use ($id){
+//            return Cat::findOrFail($id)->questions()->orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page');
+//        });
+
+
+        if (!Cache::has('catlist_latest_questions')) {
+
+            Cache::store('file')->forever('catlist_latest_questions', Cat::findOrFail($id)->questions()->orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page'));
+        }
+
+        $latest_questions = Cache::store('file')->get('catlist_latest_questions');
 
         return view('frontend.catlist', compact('cat', 'hotted_questions', 'latest_questions', 'current_active_item'));
     }
