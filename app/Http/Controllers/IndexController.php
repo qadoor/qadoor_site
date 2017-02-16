@@ -16,15 +16,24 @@ class IndexController extends Controller
     //
     public function index()
     {
-        //$tags = Tag::all()->take(14);
-        //$cats = Cat::all()->take(5);
+//        $tags = Tag::all()->take(14);
+//        $cats = Cat::all()->take(5);
+
         //$cats = DB::table('cats')->take(10)->remember(60)->get();
-        $tags = Cache::remember('index_tags', 120, function() {
-            return Tag::all()->take(14);
-        });
-        $cats = Cache::remember('index_cats', 120, function() {
-            return Cat::all()->take(5);
-        });
+
+        if (!Cache::has('index_tags')) {
+
+            Cache::store('file')->forever('index_tags', Tag::all()->take(14));
+        }
+
+        if (!Cache::has('index_cats')) {
+
+            Cache::store('file')->forever('index_cats', Cat::all()->take(5));
+        }
+
+        $cats = Cache::store('file')->get('index_cats');
+        $tags = Cache::store('file')->get('index_tags');
+
         //$tags = Tag::remember(60)->take(14)->get();
         //$cats = Cat::remember(5)->get();
         //$cats = DB::table('cats')->take(14)->remember(60)->get();
@@ -48,13 +57,28 @@ class IndexController extends Controller
         //$hotted_questions = Question::orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page');
         //$latest_questions = Question::orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page');
 
-        $hotted_questions = Cache::remember('qalist_hotted_questions', 120, function() {
-            return Question::orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page');
-        });
+//        $hotted_questions = Cache::remember('qalist_hotted_questions', 120, function() {
+//            return Question::orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page');
+//        });
 
-        $latest_questions = Cache::remember('qalist_latest_questions', 120, function() {
-            return Question::orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page');
-        });
+        if (!Cache::has('qalist_hotted_questions')) {
+
+            Cache::store('file')->forever('qalist_hotted_questions', Question::orderBy('votes', 'desc')->paginate(20, ['*'], 'hotted_page'));
+        }
+
+        $hotted_questions = Cache::store('file')->get('qalist_hotted_questions');
+
+
+//        $latest_questions = Cache::remember('qalist_latest_questions', 120, function() {
+//            return Question::orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page');
+//        });
+
+        if (!Cache::has('qalist_latest_questions')) {
+
+            Cache::store('file')->forever('qalist_latest_questions', Question::orderBy('updated_at', 'asc')->paginate(20, ['*'], 'latest_page'));
+        }
+
+        $latest_questions = Cache::store('file')->get('qalist_latest_questions');
 
 
 

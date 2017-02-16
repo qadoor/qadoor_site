@@ -16,9 +16,18 @@ class CatsRepository
     public function cats()
     {
         //$cats = Cat::all();
-        $cats = Cache::remember('CatsRepository_cats', 120, function() {
-            return Cat::all();
-        });
+//        $cats = Cache::remember('CatsRepository_cats', 120, function() {
+//            return Cat::all();
+//        });
+
+
+        if (!Cache::has('CatsRepository_cats')) {
+
+            Cache::store('file')->forever('CatsRepository_cats', Cat::all());
+        }
+
+        $cats = Cache::store('file')->get('CatsRepository_cats');
+
         return $cats;
     }
 }
