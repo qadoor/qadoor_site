@@ -21,6 +21,8 @@ class IndexController extends Controller
 
         //$cats = DB::table('cats')->take(10)->remember(60)->get();
 
+        //use file cache
+
         if (!Cache::has('index_tags')) {
 
             Cache::store('file')->forever('index_tags', Tag::all()->take(14));
